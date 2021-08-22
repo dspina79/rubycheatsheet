@@ -22,6 +22,10 @@ puts person
 puts age
 
 # ^^^ outputs "Dean" followed by "40", each on separate lines.
+
+# assign an array
+my_array = [1, 2, 3, 4, 5]
+puts my_array # outputs each element in the array, one line each
 ```
 ## Loops
 
