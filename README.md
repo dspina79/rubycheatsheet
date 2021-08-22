@@ -1,6 +1,7 @@
 # Ruby Cheat Sheet
 This will cover the basics of ruby as well as some algorithms.
 ## Assignments and Output
+
 ```ruby
 # This is a comment
 
@@ -20,8 +21,10 @@ age = 40
 puts person
 puts age
 
-# ^^^ outputs "Dean" followed by "40", each on separate lines.```
+# ^^^ outputs "Dean" followed by "40", each on separate lines.
+```
 ## Loops
+
 ```ruby
 # Loops and Iteration
 
@@ -45,4 +48,5 @@ end
 ["Dave", "John", "Lisa", "Karen"].each do |name|
     puts name
 end
-# ^^^ outputs each name in the array on a different line```
+# ^^^ outputs each name in the array on a different line
+```
