@@ -1,5 +1,15 @@
 # This is a comment
 
+# multiline comments can be used with =begin and =end
+
+# This is the header of a multiline comment
+=begin
+Even thought this does not have a hashtag at the start
+it is still considered a comment.
+This is good for header comments or explaining long
+lines of information
+=end
+
 # output a statement
 # this will print out "Hello World to the console"
 puts "Hello World"
@@ -21,3 +31,4 @@ puts age
 # assign an array
 my_array = [1, 2, 3, 4, 5]
 puts my_array # outputs each element in the array, one line each
+
