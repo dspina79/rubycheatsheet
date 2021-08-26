@@ -44,3 +44,21 @@ apple
 ant
 =end
 
+
+# Hashes
+
+# defined in key value pairs
+simplePerson = {firstName: "Brian", lastName: "Miller", age: 44}
+
+puts simplePerson # outputs {:firstName=>"Brian", :lastName=>"Miller", :age=>44}
+
+# accessing the hash value
+puts simplePerson[:firstName] # outputs Brian
+
+# manipulating a hash 
+simplePerson[:age] = 45
+puts simplePerson # outputs {:firstName=>"Brian", :lastName=>"Miller", :age=>45}
+
+# adding to a hash
+simplePerson[:favoriteColor] = "green"
+puts simplePerson # outputs {:firstName=>"Brian", :lastName=>"Miller", :age=>45, :favoriteColor=>"green"}
