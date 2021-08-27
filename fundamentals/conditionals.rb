@@ -38,3 +38,20 @@ waterAmount = 20
 
 overflow = "runneth over" if cupVolume < waterAmount
 puts overflow # outputs runneth over
+
+
+# Case Statements
+# similar to switch statements in other common languages
+
+num = 78
+
+case num
+    when 0
+        puts "Invalid expected value"
+    when 78
+        puts "It's a match"
+    else 
+        puts "It's another number" 
+end
+
+# ^^^ outputs "It's a match"
