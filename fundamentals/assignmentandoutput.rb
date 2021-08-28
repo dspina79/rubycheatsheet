@@ -32,3 +32,14 @@ puts age
 my_array = [1, 2, 3, 4, 5]
 puts my_array # outputs each element in the array, one line each
 
+# string interpolation
+
+myname = "Dean"
+myage = 40
+
+puts "Hello, my name is #{myname} and I am #{myage} years old."
+# ^^^ outputs "Hello, my name is Dean and I am 40 years old."
+
+anothernumber = 15
+puts "The square of #{anothernumber} is #{anothernumber ** 2}"
+# ^^^ outputs "The square of 15 is 225"
