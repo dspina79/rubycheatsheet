@@ -55,3 +55,25 @@ case num
 end
 
 # ^^^ outputs "It's a match"
+
+
+# Using logical operators
+
+name1 = "John"
+age = 40
+
+# logical AND (&&)
+if name1 == "John" && age > 30
+    puts "Hello, John"
+else
+    puts "Not the right person"
+end
+# ^^^ outputs "Hello, John"
+
+# logial OR (||)
+if name1 == "Brian" || age > 30
+    puts "Hello... someone I may know"
+else
+    puts "Not the right person"
+end
+# ^^^ outputs "Hello... someone I may know"
