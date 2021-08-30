@@ -36,6 +36,22 @@ class Person
         @email_address = @email
     end
 
+    def first_name
+        @first_name
+    end
+
+    def first_name=(first_name)
+        @first_name = first_name
+    end
+
+    def last_name
+        @last_name
+    end
+
+    def last_name=(last_name)
+        @last_name = last_name
+    end
+
     def output_employee_info()
         puts employee_string
     end
@@ -54,3 +70,12 @@ steve.output_employee_info() # outputs Steve Coleman - Employee ID: 100.
 deborah = Person.new("Deborah", "Sheridan", "deborah@nowhere.net")
 deborah.output_employee_info() # outputs Deborah Sheridan - Employee ID: 101.
 
+
+# look at properties
+puts deborah.first_name # outputs "Deborah"
+
+# change a property
+deborah.first_name = "Deb"
+
+# now show the changes
+deborah.output_employee_info() # outputs Deb Sheridan - Employee ID: 101.
