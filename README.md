@@ -1,6 +1,7 @@
 # Ruby Cheat Sheet
 This will cover the basics of ruby as well as some algorithms.
-## Assignments and Output
+## Basics
+### Assignments and Output
 
 ```ruby
 # This is a comment
@@ -49,7 +50,7 @@ anothernumber = 15
 puts "The square of #{anothernumber} is #{anothernumber ** 2}"
 # ^^^ outputs "The square of 15 is 225"
 ```
-## Math - Basic Arithmetic
+### Math - Basic Arithmetic
 
 ```ruby
 # Basic Arithmetic
@@ -86,7 +87,7 @@ puts mod # outputs 2
 result = x ** y
 puts result # outputs 125
 ```
-## Comparisons
+### Comparisons
 
 ```ruby
 # Comparisons 
@@ -115,7 +116,7 @@ puts 10 <=> 5  # outputs 1
 puts 10 <=> 10 # outputs 0
 
 ```
-## Loops
+### Loops
 
 ```ruby
 # Loops and Iteration
@@ -190,7 +191,7 @@ John
 
 
 ```
-## Arrays and Hashes
+### Arrays and Hashes
 
 ```ruby
 # Arrays - accessing and manipulating
@@ -258,7 +259,7 @@ puts simplePerson # outputs {:firstName=>"Brian", :lastName=>"Miller", :age=>45}
 simplePerson[:favoriteColor] = "green"
 puts simplePerson # outputs {:firstName=>"Brian", :lastName=>"Miller", :age=>45, :favoriteColor=>"green"}
 ```
-## Conditionals
+### Conditionals
 
 ```ruby
 # Conditionals
@@ -342,7 +343,7 @@ end
 # ^^^ outputs "Hello... someone I may know"
 
 ```
-## Methods
+### Methods
 
 ```ruby
 # Methods (a.k.a. functions)
@@ -359,16 +360,84 @@ def square(x)
     return x * x
 end
 
-result = add(3,4)
-puts result # outputs 7
+result_square = square(15)
+puts result_square # outputs 225 
 
 # method with two parameters
 def add(x, y)
     return x + y
 end
 
-result_square = square(15)
-puts result_square # outputs 225 
+result = add(3,4)
+puts result # outputs 7
+
+# methods with implied return parameters
+def square2(num)
+    num ** 2 # the same as return num ** 2
+end
+
+puts "The square of 16 is #{square2(16)}"
+# ^^^ outputs The square of 16 is 256
+```
+## Object Oriented Programming
+### Basics
+
+```ruby
+# Basics of Class using a Person Class
+
+# define the class
+class Person
+    # indicate that everything below this is in public scope
+    public
+
+    # static variables start with @@
+    @@last_employee_id = 100
+
+    # instance variables start with @ but can be initialized in a
+    # constructor or other methods
+
+    # constructor with variables use the initialize method
+    def initialize(first_name, last_name, email_address)
+        @first_name = first_name
+        @last_name = last_name
+        @email_address = email_address
+        @employee_id = @@last_employee_id
+        @@last_employee_id += 1
+    end
+
+    # properties (getters and setters)
+
+    # get property
+    def employee_id
+        @employee_id
+    end
+
+    # gets and sets
+    def email_address
+        @email_address
+    end
+
+    def email_address=(email)
+        @email_address = @email
+    end
+
+    def output_employee_info()
+        puts employee_string
+    end
+
+    # set everything below as a private member
+
+    def employee_string
+        "#{@first_name} #{@last_name} - Employee ID: #{@employee_id}."
+    end
+end    
+
+
+# intiializing a method
+steve = Person.new("Steve", "Coleman", "steve@nowhere.net")
+steve.output_employee_info() # outputs Steve Coleman - Employee ID: 100.
+deborah = Person.new("Deborah", "Sheridan", "deborah@nowhere.net")
+deborah.output_employee_info() # outputs Deborah Sheridan - Employee ID: 101.
 
 
 ```
