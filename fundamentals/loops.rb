@@ -43,3 +43,28 @@ end
 2
 1
 =end
+
+
+# Ranges and for ... in 
+
+# ranges
+oneToTen = 1...10
+
+for i in oneToTen
+    puts i
+end
+# ^^^ outputs 1 through 9, each on a different line
+
+morePeople = ["Lorena", "Carter", "Jessica", "Herman", "John"]
+for person in morePeople
+    puts person
+end
+# ^^^ outputs
+=begin
+Lorena
+Carter
+Jessica
+Herman
+John
+=end
+

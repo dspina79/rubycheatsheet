@@ -163,6 +163,32 @@ end
 2
 1
 =end
+
+
+# Ranges and for ... in 
+
+# ranges
+oneToTen = 1...10
+
+for i in oneToTen
+    puts i
+end
+# ^^^ outputs 1 through 9, each on a different line
+
+morePeople = ["Lorena", "Carter", "Jessica", "Herman", "John"]
+for person in morePeople
+    puts person
+end
+# ^^^ outputs
+=begin
+Lorena
+Carter
+Jessica
+Herman
+John
+=end
+
+
 ```
 ## Arrays and Hashes
 
@@ -314,5 +340,35 @@ else
     puts "Not the right person"
 end
 # ^^^ outputs "Hello... someone I may know"
+
+```
+## Methods
+
+```ruby
+# Methods (a.k.a. functions)
+
+# method with no parameters
+def say_hello()
+    puts "Hello world"
+end
+
+say_hello() # outputs "Hello World"
+
+# method with one parameter
+def square(x)
+    return x * x
+end
+
+result = add(3,4)
+puts result # outputs 7
+
+# method with two parameters
+def add(x, y)
+    return x + y
+end
+
+result_square = square(15)
+puts result_square # outputs 225 
+
 
 ```

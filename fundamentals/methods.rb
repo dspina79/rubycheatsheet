@@ -22,3 +22,4 @@ end
 
 result_square = square(15)
 puts result_square # outputs 225 
+
