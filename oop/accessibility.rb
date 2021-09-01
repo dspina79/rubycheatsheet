@@ -68,4 +68,4 @@ class Person
 end
 
 linda = Person.new("Linda", "Holderman", "linda@nowhere.net")
-linda.output_employee()
+linda.output_employee() # outputs Linda Holderman - (linda@nowhere.net)
