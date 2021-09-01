@@ -460,6 +460,22 @@ PURPLE
 ORANGE
 BLUE
 =end
+
+# make new hashes
+people = [{firstName: "Dean", lastName: "Sheridan", age: 40},
+    {firstName: "Linda", lastName: "Morrison", age: 34},
+    {firstName: "Bob", lastName: "Davis", age: 43},
+    {firstName: "Sharon", lastName: "Miller", age: 29}]
+
+new_people = people.map {|person| {name: person[:firstName] + " " + person[:lastName], isNew: true}}
+puts new_people
+# ^^^ outputs 
+=begin
+{:name=>"Dean Sheridan", :isNew=>true}
+{:name=>"Linda Morrison", :isNew=>true}
+{:name=>"Bob Davis", :isNew=>true}
+{:name=>"Sharon Miller", :isNew=>true}
+=end
 ```
 ## Object Oriented Programming
 ### Basics
