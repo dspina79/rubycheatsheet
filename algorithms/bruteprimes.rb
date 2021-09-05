@@ -30,9 +30,3 @@ end
         puts "#{num} is prime."
     end
 end
-
-# Ranges and for ... in 
-
-# ranges
-oneToTen = 1...10
-puts oneToTen
