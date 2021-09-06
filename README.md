@@ -693,3 +693,36 @@ end
 linda = Person.new("Linda", "Holderman", "linda@nowhere.net")
 linda.output_employee() # outputs Linda Holderman - (linda@nowhere.net)
 ```
+## Modules
+### Basics and Sharing Methods
+
+```ruby
+module Maths
+    def Maths.add(x, y)
+        return x + y
+    end
+
+    def Maths.subtract(x, y)
+        return x - y
+    end
+
+    def Maths.multiply(x, y)
+        return x * y
+    end
+    
+    def Maths.divide(x, y)
+        return x / y
+    end
+
+    def Maths.square(x)
+        return x * x
+    end
+end
+```
+
+```ruby
+require_relative "maths.rb"
+
+puts Maths.add(4, 3) # outputs 7
+puts Maths.square(16) # outputs 256
+```
