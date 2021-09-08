@@ -726,3 +726,40 @@ require_relative "maths.rb"
 puts Maths.add(4, 3) # outputs 7
 puts Maths.square(16) # outputs 256
 ```
+### Modules in a Class
+
+```ruby
+# basic module that will be imported into a class
+module Speech
+    def sayHello() 
+        puts "Hello"
+    end
+
+    def greet(name)
+        puts "Hello, #{name}"
+    end
+end
+```
+
+```ruby
+require_relative "speech.rb"
+
+class Person
+    public
+    def initialize(firstName, lastName)
+        @firstName = firstName
+        @lastName = lastName
+    end
+
+    def name 
+        "#{@firstName} #{@lastName}"
+    end
+
+    include Speech
+end
+
+p = Person.new("Dean", "Phillips")
+puts p.name # outputs "Dean Phillips"
+p.sayHello() # outputs "Hello"
+p.greet("Donald") #outputs "Hello, Donald"
+```
