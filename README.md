@@ -775,6 +775,13 @@ def passwordconfirmcheck(password, confirmpassword)
     end
 end
 
+def divide(numerator, denomonator)
+    if denomonator == 0
+        raise "Cannot divide by zero"
+    end
+    return numerator / denomonator
+end
+
 passwordconfirmcheck('P@ssword123', 'P@ssword123') # no error
 passwordconfirmcheck('P@ssword123', 'password123') # raises error
 # ^^^ outputs
@@ -782,6 +789,12 @@ passwordconfirmcheck('P@ssword123', 'password123') # raises error
 errorhandling/raisingexceptions.rb:5:in `passwordconfirmcheck': Passwords are not a match (RuntimeError)
 =end
 
+puts divide(10, 2) # outputs 5
+puts divide(10, 0) # raises error
+# ^^^ outputs 
+=begin
+errorhandling/raisingexceptions.rb:11:in `divide': Cannot divide by zero (RuntimeError)
+=end
 ```
 ##I/O
 ### Modules in a Class
