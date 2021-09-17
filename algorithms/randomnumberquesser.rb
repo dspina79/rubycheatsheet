@@ -5,10 +5,16 @@ end
 def playround()
     puts "Enter your upper limit"
     upperlimit = gets.chomp.to_i
+    attempts = upperlimit/2 - 1
     randomnum = generaterandom(upperlimit)
     tries = 0
+    puts "Ready to go. You have #{attempts} attempts."
     loop do
-        puts "Guess a number: "
+        if tries == 0
+            puts "Guess a number: "
+        else
+            puts "Guess again: "
+        end
         guess = gets.chomp.to_i
         if guess == randomnum
             puts "You win!"
@@ -16,7 +22,7 @@ def playround()
         end
         tries += 1
 
-        if tries > 4 
+        if tries >= attempts 
             puts "You lose. The correct number was #{randomnum}"
             break
         end
